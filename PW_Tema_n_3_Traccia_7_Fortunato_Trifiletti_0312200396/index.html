@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!--Tag di Responsività-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portale RAM: i passi della Sostenibilità</title>
+  <!--Collegamento al foglio di stile CSS-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Titolo e breve introduzione all'argomento-->
+  <header>
+    <h1>Portale RAM: i passi della Sostenibilità</h1>
+    <a href="index.html">
+      <img src="Logo_ram_milazzo.png" height="75" width="75" class="header-img" alt="Logo della Raffineria di Milazzo">
+    </a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>
+        <b>
+          La Raffineria di Milazzo, situata nella Zona industriale di Milazzo, opera dagli anni ’60 nella raffinazione del greggio e distribuzione dei derivati.
+          Occupa un’area di 212 ettari e ha avviato dagli anni ’90, un ampio processo di modernizzazione.
+          Oggi è un esempio di impegno costante per la sostenibilità ambientale, valorizzato attraverso il Bilancio di Sostenibilità.
+          I report di sostenibilità illustrano le performance e gli impatti sociali, ambientali ed economici di un’azienda.
+          Offrono trasparenza verso gli stakeholder, comunicando le iniziative legate alla sostenibilità, nonché i rischi e le opportunità connessi alle attività aziendali.
+        </b>
+      </p>
+    </section>
+
+    <!--Sezione del Download del Report con attributi di sicurezza -->
+    <section class="download">
+      <a href="RAM_BILANCIO-SOSTENIBILITA-2024_ITA_WEB80.pdf" target="_blank" rel="noopener" class="btn-download">
+        📄 Scarica qui il nostro Report
+      </a>
+    </section>
+<!--Galleria dei grafici, utile per dare maggiore comprensione dell'obiettivo della pagina-->
+    <section class="charts">
+      <div class="chart">
+        <img src="pic1.png" alt="Grafico sulle emissioni di fumi 2022–2024" class="zoomable">
+        <p>
+          Rappresentazione delle emissioni di fumi nell'ambiente nei diversi anni, se non per un aumento nel 2024,
+          ma tutto secondo gli standard AIA (Autorizzazione Integrità Ambientale). <b>Rif. Pag. 25</b>
+        </p>
+      </div>
+
+      <div class="chart">
+        <img src="pic2.png" alt="Grafico delle fonti energetiche 2022–2024" class="zoomable">
+        <p>
+          Rappresentazione delle fonti energetiche in uso nei periodi dal 2022 al 2024 con relativa energia in uscita in GJ
+          ed autosufficienza espressa in percentuale. <b>Rif. Pag. 27</b>
+        </p>
+      </div>
+
+      <div class="chart">
+        <img src="pic3.png" alt="Grafico sulla produzione dei rifiuti 2022–2024" class="zoomable">
+        <p>
+          Rappresentazione della produzione dei rifiuti con un significativo aumento tra il 2022 e il 2023,
+          e una diminuzione verso il 2024. <b>Rif. Pag. 33</b>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!--Popup per ingrandire immagini, consente il comfort visivo-->
+  <div id="popup" class="popup">
+    <span class="close">&times;</span>
+    <img id="popup-img" src="" alt="">
+  </div>
+
+  <script>
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+    const close = document.querySelector(".close");
+
+    document.querySelectorAll(".zoomable").forEach(img => {
+      img.addEventListener("click", () => {
+        popupImg.src = img.src;
+        popup.classList.add("show");
+      });
+    });
+
+    close.addEventListener("click", () => popup.classList.remove("show"));
+    popup.addEventListener("click", e => {
+      if (e.target === popup) popup.classList.remove("show");
+    });
+  </script>
+  <!--Footer o piè di pagina con un breve riassunto del report-->
+  <footer>
+    <section class="footer">
+     <p>
+      <b>
+        La Raffineria di Milazzo (RAM), joint venture tra Eni e Q8, presenta un 2024 segnato da solidità produttiva e attenzione alla sostenibilità. Sono state spedite 8,7 milioni di tonnellate di prodotti, con importanti investimenti in efficienza, sicurezza e innovazione.
+
+Sul fronte ambientale, RAM avanza nella transizione energetica con un parco fotovoltaico, l’uso di cariche biologiche, il recupero di acqua e rifiuti e un sistema di gestione certificato.
+
+Le persone restano al centro: zero infortuni, formazione costante e iniziative per la comunità rafforzano il ruolo della raffineria nel territorio.
+
+La governance è solida e trasparente, con strumenti avanzati di controllo e progetti digitali come Crudoku, che migliora la gestione dei greggi.
+
+Il report conferma l’impegno di RAM a coniugare produzione energetica, innovazione e sostenibilità.
+      </b>
+     </p>
+    </section>
+    
+  </footer>
+
+</body>
+</html>
+

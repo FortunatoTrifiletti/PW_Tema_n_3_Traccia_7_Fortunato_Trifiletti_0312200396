@@ -1,0 +1,131 @@
+/*Stile del Body del sito con Background*/
+body {
+  font-family: Calibri, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Stile dell'Header e dello sfondo */
+header {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Raffineria_di_Milazzo.jpg") center/cover no-repeat;
+  color: white;
+  padding: 20px;
+  
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+/* Sezioni testuali */
+.intro {
+  max-width: 1200px;
+  margin: 5px auto;
+  font-size: 17px;
+}
+
+/* Griglia grafici */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.chart {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.chart:hover {
+  transform: scale(1.03);
+}
+
+.chart img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chart p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Bottone download */
+.download {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Popup per ingrandimento immagini */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.popup img {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+/* Stile del Footer */
+.footer {
+    max-width: 1200px;
+  margin: 5px auto;
+  font-size: 17px;
+}
